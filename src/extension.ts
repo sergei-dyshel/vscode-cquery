@@ -259,7 +259,7 @@ export function activate(context: ExtensionContext) {
     let serverOptions: ServerOptions = {
       command: clientConfig.launchCommand,
       args: args,
-      options: {env: env}
+      options: {env: process.env}
     };
     console.log(
         `Starting ${serverOptions.command} in ${serverOptions.options.cwd}`);
